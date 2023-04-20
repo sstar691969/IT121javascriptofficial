@@ -1,0 +1,1 @@
+/* degFahren = 9/5 * degCent + 32 , created a java script program to convert degrees centigrade into degrees Fahrenheit, and write the result to the page in a descriptive The JavaScript equation for Fahrenheit to centigrade is as follow: above */
