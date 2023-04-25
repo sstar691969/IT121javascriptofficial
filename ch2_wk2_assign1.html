@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chapter 2, Assigment 1 Fahrenheit converter</title>
+</head>
+<body>
+
+    <!--the script below is for appearance on browser for button and input the temperature---->
+    
+    <input id="fahrenheit" placeholder="fahrenheit" />
+    <button onclick="convert()">Convert</button>
+    <span id="celsius"></span>
+
+
+
+<script>
+
+    function convert() {
+    
+    // 1. fetch the value from the input
+
+    const fahrenheit = parseInt(
+        document.getElementById("fahrenheit").value);
+    
+// 2. convert it to celsius
+    const celsius =(fahrenheit - 32) * 0.5556;
+    console.log(celsius);
+
+
+
+    // 3. display the number outside of button and input below
+
+    document.getElementById("celsius").innerText = celsius
+
+    } 
+
+</script>
+</body>
+</html>
