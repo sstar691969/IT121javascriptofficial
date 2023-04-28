@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+    <head>
+        <title>Chapter 3 - assignment 1</title>
+    </head>
+    <body>
+    <script>
+    var months = ["Jan", "Feb", "March","April", "May", "June","July", "August", "Sept","Nov", "Oct", "Dec"]; 
+    var nowDate = new Date(); 
+    
+    nowDate.setMonth(nowDate.getMonth()+12);
+
+    document.write("Next years date is  " + nowDate.getDate()); document.write(" of " + months[nowDate.getMonth()]);document.write(" of " + [nowDate.getFullYear()]);
+    
+    
+    
+    </script>
+    </body>
+</html>
