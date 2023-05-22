@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>Chapter_7 Assignment</title>
+
+</head>
+
+<body>
+
+
+
+
+
+
+<!--<img src = "images/us-flag.gif" onclick= "change.Img(event)" />-->
+<!--<img src = "images/jm-flag.jpg" onclick= "change.Img(event)"  />-->
+<!--<img src = "images/mx-flag.jpg"  onclick= "change.Img(event)" />-->
+<!--<img src = "images/canada.gif" onclick= "change.Img(event)" />-->
+<img height="300px" id= "bannerImage"  src = "images/et-flag.gif" /><br/>
+
+<button onclick= "changeImage('images/et-flag.gif')">Change Image 1</button>
+<button onclick= "changeImage('images/jm-flag.jpg')">Change Image 2</button>
+<button onclick= "changeImage('images/mx-flag.jpg')">Change Image 3</button>
+<button onclick= "changeImage('images/canada.gif')">Change Image 4</button>
+
+
+
+
+<script>
+
+    
+    function changeImage(fileName) { 
+    let img = document.querySelector("#bannerImage");
+    img.setAttribute("src", fileName);
+    
+   
+    
+}
+
+
+
+//The output of this code will not be visible to the user as it is a client-side script written in JavaScript to change the image displayed on the webpage.
+
+//When the user clicks on an image, the changeImg function will be triggered and will randomly select a new image from the myImages array and set the src attribute of the clicked image to the new image.
+
+//The user will see the new image displayed on the webpage without the need for a page reload.
+
+</script>
+
+</body>
+
+</html>
