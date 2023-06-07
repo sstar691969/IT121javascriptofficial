@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <title>Chapter 8 Animation</title>
+   
+
+</head>
+
+
+<body>
+
+    <style>
+
+.container {
+    width: 450px;
+    height: 450px;
+    border: 5px solid yellow;
+
+}
+@keyframes leftToRight {
+    from{
+        left: 0px;
+         }
+    to {
+        left: 300px;
+    }
+
+}
+
+#animate {
+
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    left : 0px;
+    animation-name: leftToRight;
+    /*animation-duration: 2s;*/
+    
+
+}
+
+
+
+
+
+
+
+
+    </style>
+
+
+   <div class="container">
+
+    <!---I changed from class to id= "animate"-->
+    <div id="animate"></div>
+    </div>
+
+
+
+
+    <button id = "button" >Click Me</button>
+
+   
+    
+    
+    <!--<textarea name="txtarea" rows=2 cols=50></textarea>-->
+    
+    
+    
+
+    
+
+    
+
+
+
+
+<script>
+
+//const firstInput = document.getElementById('emailMe');
+
+//const secOut = document.getElementById('output1');
+
+//const btn1 = document.getElementbyId('btn1');
+
+
+   // function getEmails() { 
+   //     secOut.innerHTML = firstInput.value;
+    
+//}
+
+//btn1.addEventListener('click',getEmails);
+let btn = document.getElementById("button");
+    
+btn.addEventListener("click", myMove );
+
+    //animate.style.animation = "3s";
+
+function myMove() {
+    let id = null;
+    const elem = document.getElementById("animate");
+    let pos = 0;
+    // The clearInterval(id) function is called to ensure any previous animations are stopped before starting a new one.
+    clearInterval(id);
+     id = setInterval(frame, 5);
+    function frame() {
+      if (pos == 350) {
+        clearInterval(id);
+        // my red box was not moving because of null do to .animate being a class
+        // animate was change to id within the <div> tags in html
+        console.log("frame");
+      } else {
+        pos++;
+        elem.style.top = pos + 'px';
+        elem.style.left = pos + 'px';
+      }
+}
+}
+
+    
+   
+</script>
+
+</body>
+
+</html>
+
+
+
