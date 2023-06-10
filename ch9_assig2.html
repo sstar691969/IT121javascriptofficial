@@ -1,0 +1,116 @@
+<!doctype html>
+
+<html>
+
+<head>   
+
+         <title>Complete JavaScript Course</title>
+
+</head>
+
+<body>   
+
+        <textarea id="txtarea" rows=2 cols=50></textarea> 
+        
+        <button id="button" >Get Emails</button> 
+        
+
+        <textarea id="txtarea2" rows=2 cols=50></textarea>   
+
+<script>
+
+             //insert the Script here
+
+// Select the first textarea element with the name attribute set to 'txtarea' and store it in the variable 'firstArea'.
+    const firstArea = document.getElementById("txtarea");
+    //const button =
+    //document.getElementByName("button");
+    const secArea = 
+    document.getElementById("txtarea2");
+
+    button.addEventListener("click",lookUp);
+
+    let btn = document.getElementById("button");
+
+
+    const string = 'sstar691969@gmail.com test hello world sstar691969@yahoo.com';
+    firstArea.value = string;
+
+    
+    
+
+
+    
+
+// rawTxt variable and eData variable checks for real emails.
+    
+    function lookUp() {
+
+        let rawTxt = firstArea.value;
+
+        const regexp = /([A-Za-z0-9._-]+@[A-Za-z0-9._-]+\.[A-Za-z0-9._-]+)/gi;
+
+        //match and extract email addresses from the 'rawTxt' string.
+
+        var eData = rawTxt.match(regexp);
+        console.log(eData);
+            ///([A-Za-z0-9._-]+@/gi);
+
+
+            //****let string = 'manager: sstar691969@gmail.com; sales: sstar691969@yahoo.com';
+//***let emailList = string.match(/[\w]+@[\w\-]+\.[\w]{2,}/g);
+//****console.log(emailList);
+        
+    
+        
+    console.log(eData);
+        if(eData !==null) {
+            const holder = []; //Create an empty Array to store unique emails
+
+            eData.forEach(function(email){
+
+                if(!holder.includes(email)) {
+                    holder.push(email);
+
+                }
+            });
+            secArea.value = holder.join("\n");
+        }
+        
+    }
+
+       // console.log(secArea);
+
+    
+
+
+    
+// Select the second textarea element with the name attribute set to 'txtarea2' and store it in the variable 'secArea'. 
+    //const secArea = txtarea2
+// Find the first button element in the document and attach a click event listener to it, calling the 'lookUp' function when clicked.
+
+// Declare a function named 'lookUp'. 
+    //function lookUp() {
+        //document.getElementById("")
+
+
+
+   // }
+    //element.addEventListener("click"lookUp());
+ // Get the value of the 'firstArea' text area and store it in the 'rawTxt' variable.
+
+// Use a regular expression to match and extract email addresses from the 'rawTxt' string, and store them in the 'eData' variable. 
+
+// Create an empty array named 'holder' to store unique email addresses. 
+
+// Iterate through each element in the 'eData' array.
+
+// Check if the current email address is not already present in the 'holder' array.
+
+// Add the current email address to the 'holder' array.
+
+      </script>
+
+</body>
+
+</html>
