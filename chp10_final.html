@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Facts Button</title>
+</head>
+
+<body>
+    <button onclick="showCatFact()">Get a Cat fact</button>
+<!----onclick= works with functions to click button to share api information on facts of cats-->
+<!---p id= "catfact" out puts information on the browser and console -->
+    <p id="catfact"></p>
+    <script>
+
+         //const request = require('request');
+        
+
+        // var model = 'corvette';
+        // request.get({
+        //     url:'https://api.api-ninjas.com/v1/cars?model=' + model,
+        //     //url: 'https://api.api-ninjas.com/v1/cats?name=' + name,
+        //     headers: {
+        //         'X-Api-Key': '54scO8Vzy0lrpBdfBqZoJewk9qttBqYmRFMtouRc'
+        //         //"api_Key": "54scO8Vzy0lrpBdfBqZoJewk9qttBqYmRFMtouRc"
+        //     },
+        // }, function(error, response, body) {
+        //     if(error) return console.error('Request failed:', error);
+        //     else if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
+        //     else console.log(body);
+        // });
+
+        //         var model = 'corvette'                                          
+        // $.ajax({
+        //     method: 'GET',
+        //     url: 'https://api.api-ninjas.com/v1/cars?model=' + model,
+        //     headers: { 'X-Api-Key': '54scO8Vzy0lrpBdfBqZoJewk9qttBqYmRFMtouRc'},
+        //     contentType: 'application/json',
+        //     success: function(result) {
+        //         console.log(result);
+        //     },
+        //     error: function ajaxError(jqXHR) {
+        //         console.error('Error: ', jqXHR.responseText);
+        //     }
+        // });
+
+
+        
+
+
+
+
+
+
+
+
+
+
+        async function getCatFact() {
+
+            //const api_endpoint = "https://api.api-ninjas.com/v1/cars?limit=2&model= "
+            const api_endpoint = "https://cat-fact.herokuapp.com/facts/random?amount=1"
+            //const api_endpoint = "https://pokeapi.co/api/v2/pokedex/{param1}/"
+            const response = await fetch(api_endpoint);
+            const json_response = await response.json();
+         
+            console.log(json_response);
+            return json_response;
+        }
+
+        async function showCatFact() {
+            const catFactResponse = await getCatFact();
+            const paragraphTag = document.getElementById("catfact");
+            paragraphTag.innerText = catFactResponse.text;
+        }
+        console.log(request);
+
+    </script>
+</body>
+</html>
